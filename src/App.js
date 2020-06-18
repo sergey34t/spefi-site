@@ -1,13 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import s from './App.module.css';
 
-function App() {
-  return (
-    <div className="App">
-      <div>Hello world!!!</div>
-    </div>
-  );
+const App = () => {
+    return (
+        <div className={s.container}>
+            <input type="text" name="" className={s.inputTxt} placeholder="Enter domain...."/>
+            <div className={s.inputBtn}></div>
+        </div>
+    )
 }
+
 
 export default App;
