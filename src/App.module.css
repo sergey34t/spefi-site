@@ -10,16 +10,16 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background: white;
-  height: 30px;
-  border-radius: 30px;
+  height: 25px;
+  border-radius: 25px;
   padding: 10px;
 }
 
 .inputBtn {
   color: #e84118;
   float: right;
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   /*background-color: #2f3640;*/
 
@@ -31,6 +31,7 @@ body {
   cursor: pointer;
   background-image: url('./assets/images/search.svg');
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .inputTxt{
@@ -42,7 +43,7 @@ body {
   color: black;
   font-size: 16px;
   transition: 0.4s;
-  line-height: 30px;
-  width: 400px;
+  line-height: 25px;
+  width: 450px;
   font-weight: bold;
 }
