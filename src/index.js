@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import SamuraiJSApp from "./AppJ";
+
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <SamuraiJSApp />
   </React.StrictMode>,
   document.getElementById('root')
 );
