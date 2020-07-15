@@ -6,15 +6,12 @@ import ListItemText from '@material-ui/core/ListItemText';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import {connect} from "react-redux";
-import {selectIndex} from "./redux/app-reducer";
-import {Provider} from "react-redux";
-import store from "./redux/store";
+import {selectIndex} from "../../../redux/app-reducer";
+
 
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        /*backgroundColor: theme.palette.background.paper,*/
-        float: "left",
         borderRadius: 50,
         backgroundColor: "aquamarine"
     },
@@ -35,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-const AppJ = (props) => {
+const DropDownItem = (props) => {
 
     const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -67,7 +64,7 @@ const AppJ = (props) => {
                     className={classes.listItem}
                     onClick={handleClickListItem}
                 >
-                    <ListItemText primary={props.options[selectedIndex].item}/>
+                    <ListItemText primary={props.options[selectedIndex].text}/>
                 </ListItem>
             </List>
             <Menu
@@ -80,12 +77,12 @@ const AppJ = (props) => {
 
                 {props.options.map((option, index) => (
                     <MenuItem
-                        key={option.id}
+                        key={index}
                         selected={index === props.selectedIndex}
                         onClick={(event) => handleMenuItemClick(event, index)}
                         className={classes.it}
                     >
-                        {option.item}
+                        {option.text}
                     </MenuItem>
                 ))}
             </Menu>
@@ -103,14 +100,5 @@ const mapStateToProps = (state) => {
 
 
 
-let AppContainer = connect(mapStateToProps, {selectIndex})(AppJ);
+export default connect(mapStateToProps, {selectIndex})(DropDownItem);
 
-
-const SamuraiJSApp = (props) => {
-    return <Provider store={store}>
-                <AppContainer />
-           </Provider>
-
-}
-
-export default SamuraiJSApp;

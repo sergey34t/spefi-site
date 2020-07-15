@@ -3,11 +3,11 @@ const SELECT_OPTION = 'SELECT-OPTION';
 
 let initialState = {
     options: [
-        {id: 1, item: 'google'},
-        {id: 2, item: 'yandex'},
-        {id: 3, item: 'yahoo'}
+        { item: 'GOOGLE', text: 'G'},
+        { item: 'YANDEX', text: 'Y'},
+        { item: 'YAHOO', text: 'H'}
     ],
-    selectedIndex: 1
+    selectedIndex: 0
 };
 
 
