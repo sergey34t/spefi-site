@@ -12,7 +12,7 @@ import {selectIndex} from "../../../redux/app-reducer";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        borderRadius: 50,
+        borderRadius:50,
         backgroundColor: "aquamarine"
     },
     nav: {
